@@ -1,0 +1,517 @@
+@media screen and (max-width: 1100px) {
+    header {
+        max-height: 664px;
+    }
+
+    .nav-phone-num {
+        display: none;
+    }
+    nav {
+        margin: 0;
+        padding: 0;
+    }
+    .nav-lang-switch {
+        margin-right: 32px;
+    }
+    .lang-switch-button {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .nav-num {
+        margin-right: 16px;
+        gap: 0;
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .num-button {
+        width: 123px;
+        height: 32px;
+        display: flex;
+    }
+
+    .header-content {
+        width: 96%;
+        margin: 32px auto 0;
+    }
+    .header-content h1 {
+        max-width: 602px;
+        font-size: 28px;
+        line-height: 33px;
+    }
+    .header-content p {
+        margin-top: 12px;
+        font-size: 18px;
+        line-height: 21px;
+        max-width: 602px;
+    }
+    .header-button-container {
+        margin-top: 28px;
+    }
+    .header-button-container p {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .header-button {
+        width: 218px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    section {
+        padding: 64px 2%;
+    }
+    
+    .benefits-container {
+        margin-top: 32px;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+    .benefits-item {
+        max-width: 580px;
+    }
+    .benefits-item p {
+        max-width: 500px;
+    }
+
+    .section-benefits {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .section-benefits h2 {
+        margin-left: 2%;
+    }
+
+    .photos-container {
+        margin-top: 62px;
+        width: 100%;
+        height: fit-content;
+        flex-direction: column;
+    }
+    .mainphoto-container {
+        max-width: 100%;
+        width: 100%;
+        height: fit-content;
+        aspect-ratio: 1/1;
+    }
+    .photos {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+    }
+    .photo-container {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1/1;
+    }
+    .photo-wrapper h2 {
+        margin: 0;
+    }
+
+    .quiz-section h2 {
+        max-width: 572px;
+    }
+    .progress-bar-text {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    #progress-bar {
+        margin-top: 20px;
+    }
+
+    .question-container {
+        max-width: 434px;
+    }
+
+    .certificate-section p {
+        max-width: 610px;
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .certificate-container {
+        margin: 32px auto 0;
+        max-width: 430px;
+        align-items: center;
+    }
+    .certificate-link {
+        max-width: 235px;
+        height: 40px;
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .certificate-download {
+        max-width: 94px;
+        height: 40px;
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .desktop {
+        display: none !important;
+    }
+    .mobile {
+        display: block !important;
+    }
+
+    .swiper-pagination-bullet {
+        border: 1px solid rgba(210, 172, 111, 1) !important;
+        opacity: 1 !important;
+        background: none !important;
+    }
+    .swiper-pagination-bullet-active {
+        background: rgba(210, 172, 111, 1) !important;
+    }
+
+    .faq {
+        margin: 32px auto 0;
+    }
+
+    .renovation-section {
+        gap: 20px;
+    }
+    .renovation-left {
+        min-height: 509px;
+        aspect-ratio: auto;
+    }
+    .renovation-right {
+        max-width: 367px;
+    }
+    .renovation-title {
+        margin-top: 32px;
+    }
+    .renovation-title h2 {
+        font-size: 39px;
+        line-height: 46px;
+    }
+    .renovation-title .second {
+        text-align: right !important;
+    }
+    .renovation-title h2:last-of-type {
+        text-align: left !important;
+        margin-left: 12%;
+    }
+
+    .circle {
+        right: -16px;
+        top: 35%;
+        width: 173px;
+        height: 173px;
+    }
+    .circle span {
+        left: 50%;
+        top: -5%;
+        font-size: 16px;
+    }
+
+    .renovation-button-container {
+        gap: 24px;
+    }
+    .renovation-button-container p {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .renovation-button {
+        width: 100%;
+        height: 44px;
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    footer {
+        margin: 64px auto 0;
+        padding-bottom: 32px;
+        width: 96%;
+    }
+    .footer-text {
+        max-width: 650px;
+        width: 100%;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    
+    .copyright {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    header {
+        max-height: 528px;
+    }
+
+    .header-content {
+        width: 90%;
+    }
+    .header-content h1 {
+        max-width: 267px;
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .header-content p {
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: 19px;
+        max-width: 275px;
+    }
+
+    section {
+        padding: 52px 5%;
+    }
+    
+    section h2 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .benefits-container {
+        margin-top: 32px;
+        gap: 16px;
+    }
+    .benefits-item {
+        min-height: 200px;
+        width: 90%;
+        padding: 16px;
+    }
+    .benefit-title {
+        min-height: 64px;
+    }
+    .benefit-title h2 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .benefits-item p {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .section-benefits h2 {
+        margin-left: 5%;
+    }
+
+    .photos-container {
+        margin-top: 52px;
+    }
+    .photo-wrapper {
+        padding: 16px;
+    }
+    .photo-wrapper h2 {
+        font-size: 20px;
+        line-height: 24px;
+        margin: 0;
+    }
+    .photo-wrapper p {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .progress-bar-text {
+        margin-top: 12px;
+        font-size: 18px;
+        line-height: 21px;
+        flex-direction: column;
+    }
+    .progress-bar-text .progress-percent {
+        display: flex;
+        align-self: flex-end;
+    }
+
+    #progress-bar {
+        margin-top: 20px;
+    }
+    
+    .answers button {
+        width: 100%;
+        height: 44px;
+        border: 1px solid rgba(210, 172, 111, 1);
+        background: none;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 21px;
+        cursor: pointer;
+        transition: all .1s ease;
+    }
+    .answers button:hover {
+        background:rgba(210, 172, 111, 1);
+    }
+    .answers button:focus {
+        background:rgba(210, 172, 111, 1);
+    }
+    #input-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    #input-container input {
+        width: 100%;
+        height: 44px;
+        border: 1px solid rgba(210, 172, 111, 1);
+        background: none;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 21px;
+        text-align: center;
+    }
+    #input-container input::placeholder {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 21px;
+        color: rgba(165, 165, 165, 1);
+    }
+    .navigation {
+        max-width: 442px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navigation button {
+        max-width: 324px;
+        width: 100%;
+        height: 38px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 21px;
+        border: none;
+        transition: all .1s ease;
+    }
+    #next-btn {
+        margin: 20px auto 4px;
+        background-color: rgba(210, 172, 111, 1);
+        color: rgba(255, 255, 255, 1);
+        cursor: pointer;
+    }
+    #next-btn:hover {
+        background: none;
+        border: 1px solid rgba(210, 172, 111, 1);
+        color: rgba(210, 172, 111, 1);
+    }
+    #back-btn {
+        background: none;
+        color: rgba(210, 172, 111, 1);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    #back-btn:hover {
+        background: rgba(210, 172, 111, .1);
+    }
+    .confidentiality {
+        margin: 20px auto 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        max-width: 442px;
+        width: 100%;
+    }
+    .confidentiality img {
+        width: 32px;
+        height: 32px;
+    }
+    .confidentiality p {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 16px;
+        color: rgba(128, 128, 128, 1);
+    }
+
+    .certificate-section p {
+        font-size:18px;
+        line-height: 21px;
+    }
+
+    .certificate-container {
+        margin: 32px auto 0;
+    }
+    .certificate-icon {
+        width: 87px;
+        height: 87px;
+        aspect-ratio: 1/1;
+    }
+    .certificate-buttons-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 7px;
+        margin-left: 35px;
+    }
+
+    .swiper {
+        margin: 32px auto 0;
+        width: 100%;
+        height: 380px;
+    }
+    .swiper-slide {
+        max-width: 343px;
+        max-height: 343px;
+        width: 100%;
+        background: rgb(175, 175, 175);
+    }
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .faq {
+        margin: 32px auto 0;
+        padding: 23.5px 24px;
+    }
+
+
+    .renovation-section {
+        width: 100%;
+        padding: 0;
+        gap: 0;
+    }
+    .renovation-left {
+        max-height: 1000px;
+        min-height: 579px;
+        width: 100%;
+    }
+    .renovation-left img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .renovation-right {
+        position: absolute;
+        max-width: 90%;
+        height: 100%;
+        padding-bottom: 52px;
+        padding-top: 52px;
+        left: 5%;
+    }
+    .renovation-title {
+        margin-top: 0;
+    }
+
+    .circle {
+        right: -75px;
+        top: 32%;
+    }
+
+    footer {
+        margin: 52px auto 0;
+        padding-bottom: 32px;
+        width: 90%;
+    }
+    .footer-logo {
+        margin-top: 24px;
+        width: 95px;
+        height: 94px;
+    }
+    .footer-text {
+        max-width: 272px;
+        margin-top: 24px;
+        font-size: 18px;
+        line-height: 21px;
+    }
+    
+    .socials {
+        margin: 52px auto 0;
+    }
+    .copyright {
+        margin-top: 40px;
+    }
+}

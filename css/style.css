@@ -2,6 +2,9 @@
     font-family: "Cormorant Garamond", serif;
     box-sizing: border-box;
 }
+html {
+    overflow-x: hidden;
+}
 body {
     margin: 0;
     padding: 0;
@@ -61,6 +64,9 @@ nav .logo {
 .active {
     color: rgba(255, 255, 255, 1);
     text-decoration: underline;
+}
+.accent {
+    color: rgba(210, 172, 111, 1);
 }
 
 .nav-num {
@@ -147,6 +153,7 @@ section h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 10px;
 }
 .benefits-item {
     max-width: 500px;
@@ -460,6 +467,14 @@ section h2 {
     height: 24px;
     transition: all .1s ease;
 }
+
+.certificate-buttons-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 24px;
+    margin-left: 24px;
+}
 .certificate-link {
     max-width: 275px;
     width: 100%;
@@ -769,4 +784,8 @@ footer {
     line-height: 16px;
     text-align: center;
     color: rgba(255, 255, 255, 1);
+}
+
+.swiper-pagination {
+    display: none !important;
 }

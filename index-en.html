@@ -20,7 +20,7 @@
         />
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-        <script src="scripts/quiz-es.js" type="module"></script>
+        <script src="scripts/quiz.js" type="module"></script>
         <script src="scripts/swiper.js" type="module"></script>
         <script src="scripts/faq-list.js"></script>
     </head>
@@ -36,55 +36,59 @@
                 />
                 <div class="nav-container">
                     <div class="nav-lang-switch">
-                        <a href="index.html" class="lang-switch-button active"> ES </a>
-                        <a href="index-en.html" class="lang-switch-button"> EN </a>
+                        <a href="index.html" class="lang-switch-button"> ES </a>
+                        <a href="index-en.html" class="lang-switch-button active"> EN </a>
                     </div>
                     <div class="nav-num">
                         <p class="nav-phone-num">(+34) 613 63 70 54</p>
-                        <a href="tel:" class="num-button">Llámenos</a>
+                        <a href="tel:" class="num-button">Call us</a>
                     </div>
                 </div>
             </nav>
             <div class="header-content">
                 <h1>
-                    Su reforma perfecta en España: ¡rápida, de alta calidad y sin preocupaciones!
+                    Your perfect renovation in Spain — fast, high-quality, and
+                    hassle-free!
                 </h1>
                 <p>
-                    Deje una solicitud hoy - medición mañana, ¡reparación estrictamente a tiempo o le pagamos por el retraso!
+                    Submit your request today — measurement as soon as tomorrow,
+                    renovation strictly on time, or we pay you for the delay!
                 </p>
                 <div class="header-button-container">
-                    <p>Obtenga un cálculo erróneo <span class="accent">gratis!</span></p>
-                    <a href="/" class="header-button">Asesoramiento</a>
+                    <p>Get a free estimate!</p>
+                    <a href="/" class="header-button">Get a consultation</a>
                 </div>
             </div>
         </header>
         <main>
             <section class="section-benefits">
-                <h2>[ventajas de la empresa]</h2>
+                <h2>[company benefits]</h2>
                 <div class="benefits-container">
                     <div class="benefits-item">
                         <div class="benefit-title">
-                            <h2>La mejor calidad</h2>
+                            <h2>Best quality</h2>
                             <img src="images/benefit-1.png" alt="" />
                         </div>
                         <p>
-                            Mano de obra de alto nivel, materiales de primera calidad, artesanos experimentados.
+                            High-level craftsmanship, premium materials,
+                            experienced professionals.
                         </p>
                     </div>
                     <div class="benefits-item">
                         <div class="benefit-title">
-                            <h2>Rapidez</h2>
+                            <h2>Speed</h2>
                             <img src="images/benefit-2.png" alt="" />
                         </div>
-                        <p>Realizamos las mediciones en las 24 horas siguientes a la presentación de la solicitud.</p>
+                        <p>Measurement within 24 hours after the request.</p>
                     </div>
                     <div class="benefits-item">
                         <div class="benefit-title">
-                            <h2>Compromiso</h2>
+                            <h2>Commitment</h2>
                             <img src="images/benefit-3.png" alt="" />
                         </div>
                         <p>
-                            Garantía de cumplimiento de los plazos de reparación. Si se incumple el plazo, se abona una indemnización.
+                            Guaranteed on-time completion. If the deadline is
+                            missed, compensation is provided.
                         </p>
                     </div>
                 </div>
@@ -92,33 +96,33 @@
                 <div class="photos-container">
                     <div id="photo-1" class="mainphoto-container">
                         <div class="photo-wrapper">
-                            <h2>Renovación del salón</h2>
-                            <p>Madrid, España, 2024</p>
+                            <h2>Living room renovation</h2>
+                            <p>Madrid, Spain, 2024</p>
                         </div>
                     </div>
                     <div class="photos">
                         <div id="photo-2" class="photo-container">
                             <div class="photo-wrapper">
-                                <h2>Renovación de la cocina</h2>
-                                <p>Barcelona, España, 2024</p>
+                                <h2>Kitchen renovation</h2>
+                                <p>Barcelona, Spain, 2024</p>
                             </div>
                         </div>
                         <div id="photo-3" class="photo-container">
                             <div class="photo-wrapper">
-                                <h2>Renovación del dormitorio</h2>
-                                <p>Marbella, España, 2025</p>
+                                <h2>Bedroom renovation</h2>
+                                <p>Marbella, Spain, 2025</p>
                             </div>
                         </div>
                         <div id="photo-4" class="photo-container">
                             <div class="photo-wrapper">
-                                <h2>Renovación del baño</h2>
-                                <p>Madrid, España, 2024</p>
+                                <h2>Bedroom renovation</h2>
+                                <p>Madrid, Spain, 2024</p>
                             </div>
                         </div>
                         <div id="photo-5" class="photo-container">
                             <div class="photo-wrapper">
-                                <h2>Renovación de un local comercial</h2>
-                                <p>Barcelona, España, 2024</p>
+                                <h2>Commercial space renovation</h2>
+                                <p>Barcelona, Spain, 2024</p>
                             </div>
                         </div>
                     </div>
@@ -126,24 +130,25 @@
             </section>
 
             <section class="quiz-section">
-                <h2>[Averigüe el coste de su reparación en 1 minuto!]</h2>
+                <h2>[Find out your renovation cost in just 1 minute!]</h2>
                 <div class="progress-bar-text">
                     <p>
-                        Responda a algunas preguntas y le prepararemos un presupuesto personalizado
+                        Answer a few questions, and we'll prepare a personalized
+                        estimate for you
                     </p>
                     <p id="progress-percent" class="progress-percent">0%</p>
                 </div>
                 <progress id="progress-bar" max="100" value="0"></progress>
 
                 <div class="question-container">
-                    <p id="question-count">Pregunta 1 de 7</p>
+                    <p id="question-count">Question 1 of 7</p>
                     <p id="question-text">Loading...</p>
                     <div class="answers" id="answers-container"></div>
                     <div id="input-container"></div>
                 </div>
                 <div class="navigation">
-                    <button id="next-btn">Siguiente</button>
-                    <button id="back-btn" style="display: none">Volver</button>
+                    <button id="next-btn">Next</button>
+                    <button id="back-btn" style="display: none">Back</button>
                 </div>
                 <div class="confidentiality" id="confidentiality">
                     <img
@@ -153,17 +158,20 @@
                         height="32"
                     />
                     <p>
-                        Mantenemos la confidencialidad de sus datos y los usamos solo para ponernos en contacto con usted.
+                        We keep your data confidential and use it only to
+                        contact you.
                     </p>
                 </div>
             </section>
 
             <section class="certificate-section">
-                <h2>[Nuestro certificado de garantía]</h2>
+                <h2>[Our warranty certificate]</h2>
                 <p>
-                    Ofrecemos una garantía sobre la realización de los trabajos y los materiales utilizados. Consulte nuestro certificado, que avala el alto nivel de nuestro servicio y fiabilidad.
+                    We offer a guarantee on the completion of the work and the
+                    materials used. Please refer to our certificate, which
+                    supports the high level of our service and reliability.
                 </p>
-                <div class="certificate-container" style="max-width: 618px;">
+                <div class="certificate-container">
                     <a
                         href="images/certificate.png"
                         class="certificate-icon"
@@ -176,20 +184,20 @@
                             href="images/certificate.png"
                             class="certificate-link"
                             target="_blank"
-                            >Ver el certificado</a
+                            >View the certificate</a
                         >
                         <a
                             href="images/certificate.png"
                             class="certificate-download"
-                            download style="max-width: 242px;"
-                            >Descargar el certificado</a
+                            download
+                            >Download</a
                         >
                     </div>
                 </div>
             </section>
 
             <section style="padding-top: 0">
-                <h2>[reseñas]</h2>
+                <h2>[Reviews]</h2>
                 <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -215,7 +223,8 @@
                         <div class="faqs-item">
                             <div class="question">
                                 <p>
-                                    ¿Qué garantías ofrecen sobre el trabajo realizado?
+                                    What guarantees do you provide for the work
+                                    performed?
                                 </p>
                                 <img
                                     class="chevron"
@@ -227,14 +236,18 @@
                             </div>
                             <div id="answer" class="answer">
                                 <p>
-                                    Ofrecemos una garantía sobre la calidad de los trabajos realizados y los materiales utilizados. Si no cumplimos con el plazo acordado, le compensaremos.
+                                    We guarantee the quality of the work carried
+                                    out and the materials used. If we fail to
+                                    meet the agreed deadline, you will receive
+                                    compensation.
                                 </p>
                             </div>
                         </div>
                         <div class="faqs-item">
                             <div class="question">
                                 <p>
-                                    ¿Cuánto tiempo tardaré en recibir los resultados después de enviar la solicitud?
+                                    How quickly will I get results after
+                                    submitting a request?
                                 </p>
                                 <img
                                     class="chevron"
@@ -246,30 +259,16 @@
                             </div>
                             <div id="answer" class="answer">
                                 <p>
-                                    La medición se realiza dentro de las 24 horas posteriores a la solicitud, y las obras comenzarán lo antes posible, según sus preferencias.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="faqs-item">
-                            <div class="question">
-                                <p>¿Cómo puedo hacer un seguimiento del proceso de la reforma?</p>
-                                <img
-                                    class="chevron"
-                                    src="images/down-chevron.png"
-                                    alt=""
-                                    width="24"
-                                    height="24"
-                                />
-                            </div>
-                            <div id="answer" class="answer">
-                                <p>
-                                    Proporcionamos actualizaciones regulares sobre las fases de la reforma y garantizamos el cumplimiento de los plazos.
+                                    The measurement is carried out within 24
+                                    hours of submitting your request, and the
+                                    renovation will begin as soon as possible,
+                                    according to your preferences.
                                 </p>
                             </div>
                         </div>
                         <div class="faqs-item">
                             <div class="question">
-                                <p>¿Cómo puedo contactarlos para una consulta?</p>
+                                <p>How can I track the renovation process?</p>
                                 <img
                                     class="chevron"
                                     src="images/down-chevron.png"
@@ -280,13 +279,15 @@
                             </div>
                             <div id="answer" class="answer">
                                 <p>
-                                    Puede contactarnos a través del formulario en el sitio web, completando sus datos de contacto, o por teléfono, que encontrará en nuestra página.
+                                    We provide regular updates on each stage of
+                                    the renovation and ensure full control over
+                                    deadlines.
                                 </p>
                             </div>
                         </div>
                         <div class="faqs-item">
                             <div class="question">
-                                <p>¿Cómo puedo obtener un presupuesto exacto para la reforma?</p>
+                                <p>How can I contact you for a consultation?</p>
                                 <img
                                     class="chevron"
                                     src="images/down-chevron.png"
@@ -297,7 +298,29 @@
                             </div>
                             <div id="answer" class="answer">
                                 <p>
-                                    Para obtener un presupuesto exacto, debe completar el cuestionario en nuestro sitio web. Prepararemos una estimación personalizada en 1 minuto.
+                                    You can reach us through the contact form on
+                                    our website or by phone, as indicated on the
+                                    site.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faqs-item">
+                            <div class="question">
+                                <p>How can I get an exact renovation cost?</p>
+                                <img
+                                    class="chevron"
+                                    src="images/down-chevron.png"
+                                    alt=""
+                                    width="24"
+                                    height="24"
+                                />
+                            </div>
+                            <div id="answer" class="answer">
+                                <p>
+                                    To receive an accurate renovation estimate,
+                                    you need to complete the quiz on our
+                                    website. We will prepare a personalized
+                                    calculation for you in just 1 minute.
                                 </p>
                             </div>
                         </div>
@@ -315,21 +338,22 @@
                 </div>
                 <div class="renovation-right">
                     <div class="renovation-title">
-                        <h2>Reparación</h2>
+                        <h2>Renovation</h2>
                         <h2
                             class="second"
-                            style="text-align: center !important; margin-left: 4%"
+                            style="text-align: center; margin-left: 4%"
                         >
-                            <span class="diff">sin</span>
+                            <span class="diff">Without</span>
                         </h2>
-                        <h2 style="text-align: right !important">preocupaciones</h2>
+                        <h2 style="text-align: right">Worries</h2>
                     </div>
                     <div class="renovation-button-container">
                         <p>
-                            Comience la reforma sin riesgos ni preocupaciones — ¡deje su solicitud para un presupuesto gratuito ahora mismo!
+                            Start your renovation with no risks or worries —
+                            submit your request for a free estimate right now!
                         </p>
                         <a href="/" class="renovation-button"
-                            >Obtener presupuesto gratuito</a
+                            >Get a free estimate</a
                         >
                     </div>
                 </div>
@@ -359,7 +383,11 @@
                 loading="lazy"
             />
             <p class="footer-text">
-                Deja que Renovart haga realidad tu visión. Nuestro equipo de diseñadores de interiores, arquitectos y contratistas altamente capacitados está dedicado a ofrecer servicios integrales de renovación de hogares. Desde la planificación inicial hasta la ejecución final, ofrecemos una solución llave en mano que se encarga de cada detalle.
+                Let Renovart turn your vision into reality. Our team of skilled
+                interior designers, architects, and contractors is dedicated to
+                providing comprehensive home renovation services. From initial
+                planning to final execution, we offer a turnkey solution that
+                takes care of every detail.
             </p>
             <div class="socials">
                 <a href="/">
@@ -375,7 +403,7 @@
                     <img src="images/twitter-bird.svg" alt="" />
                 </a>
             </div>
-            <p class="copyright">Copyright 2024 © Todos los derechos reservados</p>
+            <p class="copyright">Copyright 2025 © All Right Reserved</p>
         </footer>
     </body>
 </html>
