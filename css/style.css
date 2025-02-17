@@ -573,6 +573,11 @@ section h2 {
     height: 100%;
     object-fit: cover;
 }
+.swiper-slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .faq {
     max-width: 664px;
