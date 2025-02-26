@@ -269,17 +269,24 @@ section h2 {
 
 .quiz-section {
     background-color: rgba(251, 250, 246, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .quiz-section h2 {
+    display: flex;
+    align-self: start;
     color: rgba(0, 34, 14, 1);
 }
 .progress-bar-text {
+    width: 100%;
     margin-top: 12px;
     font-size: 24px;
     font-weight: 600;
     line-height: 29px;
     color: rgba(210, 172, 111, 1);
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 .progress-bar-text .progress-percent {
@@ -793,4 +800,11 @@ footer {
 
 .swiper-pagination {
     display: none !important;
+}
+
+.successful {
+    display: none;
+    width: 72px;
+    height: 72px;
+    margin-top: 30px;
 }

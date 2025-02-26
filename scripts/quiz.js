@@ -8,6 +8,7 @@ const questions = [
     { text: "Your contact details:", answers: [], inputs: ["Name", "Phone number"] }
 ];
 let currentQuestion = 0;
+const userAnswers = [];
 
 
 function updateProgress() {
@@ -53,14 +54,57 @@ function loadQuestion() {
 }
 
 function selectAnswer(answer) {
-    console.log(`Selected answer: ${answer}`);
+    userAnswers[currentQuestion] = { question: questions[currentQuestion].text, answer };
+    console.log(userAnswers);
+    nextQuestion();
 }
 
 function nextQuestion() {
+    const inputContainer = document.getElementById("input-container");
+    const inputs = inputContainer.querySelectorAll("input");
+
+    let inputValues = Array.from(inputs).map(input => input.value.trim()).filter(value => value !== "");
+
+    if (inputValues.length > 0) {
+        userAnswers[currentQuestion] = { 
+            question: questions[currentQuestion].text, 
+            answer: inputValues.join(", ") 
+        };
+    } else if (userAnswers[currentQuestion]) {
+    } else {
+        userAnswers[currentQuestion] = { 
+            question: questions[currentQuestion].text, 
+            answer: "No answer provided"  
+        };
+    }
+
     if (currentQuestion < questions.length - 1) {
         currentQuestion++;
         loadQuestion();
+    } else {
+        sendFormData();
+
+        document.getElementById("progress-percent").textContent = `100%`;
+        document.getElementById("progress-bar").value = 100;
+        document.getElementById("question-container").style.display = "none";
+        document.getElementById("navigation").style.display = "none";
+        document.getElementById("successful").style.display = "block";
     }
+}
+
+function sendFormData() {
+    fetch("../php/send-mail.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(userAnswers)
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log("Data sent successfully!");
+    })
+    .catch(error => {
+        console.error("Error sending data:", error);
+    });
 }
 
 function prevQuestion() {
