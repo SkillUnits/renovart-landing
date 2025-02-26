@@ -1,11 +1,11 @@
 const questions = [
     { text: "What type of property needs renovation?", answers: ["Apartment", "House", "Commercial property"], input: "Other" },
-    { text: "Approximate property size:", answers: ["Up to 50 m²", "50–100 m²", "100-200 м²", "More than 200 m²"] },
+    { text: "Approximate property size", answers: ["Up to 50 m²", "50–100 m²", "100-200 м²", "More than 200 m²"] },
     { text: "What type of work is required?", answers: ["Full renovation (turnkey)", "Major renovation", "Cosmetic renovation"], input: "Other" },
     { text: "What is the current stage of the property?", answers: ["Rough finishing", "Renovation in progress", "Completed, needs an update"] },
     { text: "Where is the property located?", answers: [], input: "City/district" },
     { text: "When do you want to start the renovation?", answers: ["As soon as possible", "Within a month", "In 2–3 months"], input: "Other" },
-    { text: "Your contact details:", answers: [], inputs: ["Name", "Phone number"] }
+    { text: "Your contact details", answers: [], inputs: ["Name", "Phone number"] }
 ];
 let currentQuestion = 0;
 const userAnswers = [];

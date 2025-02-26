@@ -15,15 +15,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mail = new PHPMailer(true);
     try {
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com'; // SMTP-сервер
+        $mail->Host = 'mail.privateemail.com'; // SMTP-сервер
         $mail->SMTPAuth = true;
-        $mail->Username = 'r.gubarev1303@gmail.com'; // Ваша пошта
-        $mail->Password = 'aknc fdij ryff pfrj '; // Пароль або App Password
+        $mail->Username = 'info@renovartstudio.es'; // Ваша пошта
+        $mail->Password = 'm3*KDs90LW,U'; // Ваш пароль або App Password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
-        $mail->setFrom('noreply@gmail.com', 'Formulario');
-        $mail->addAddress('r.gubarev1303@gmail.com'); // Кому надсилати
+        $mail->CharSet = 'UTF-8'; 
+
+        $mail->setFrom('info@renovartstudio.es', 'Formulario');
+        $mail->addAddress('info@renovartstudio.es'); 
+
         $mail->Subject = 'Respuestas del formulario';
         $mail->Body = $message;
 
