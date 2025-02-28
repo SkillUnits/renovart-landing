@@ -30,7 +30,7 @@ header {
 }
 
 nav {
-    margin: 0 4% 0 3%;
+    margin: 0 4% 0 4%;
     padding: 12px 0 0;
     display: flex;
     flex-direction: row;
@@ -39,7 +39,7 @@ nav {
     color: rgba(255, 255, 255, 1);
 }
 nav .logo {
-    max-width: 100px;
+    max-width: 62px;
 }
 .nav-container {
     display: flex;
@@ -763,8 +763,8 @@ footer {
 }
 .footer-logo {
     margin-top: 24px;
-    width: 151px;
-    height: 149px;
+    width: 100px;
+    height: 100px;
 }
 .footer-text {
     max-width: 810px;
