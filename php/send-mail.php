@@ -7,11 +7,7 @@ error_reporting(E_ALL);
 require '/home/renofege/public_html/vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\SMTP;
-
-require '../vendor/phpmailer/phpmailer/src/Exception.php';
-require '../vendor/phpmailer/phpmailer/src/PHPMailer.php';
-require '../vendor/phpmailer/phpmailer/src/SMTP.php';
+// require '../vendor/autoload.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $data = json_decode(file_get_contents("php://input"), true);
@@ -24,17 +20,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mail = new PHPMailer(true);
     try {
         $mail->isSMTP();
-        $mail->Host = 'server124.web-hosting.com'; // SMTP-сервер
+        $mail->Host = 'mail.privateemail.com'; // SMTP-сервер
         $mail->SMTPAuth = true;
-        $mail->Username = 'info@renovartstudio.eu'; // Ваша пошта
-        $mail->Password = 'DZCZ)jM5Lu}9'; // Ваш пароль або App Password
+        $mail->Username = 'info@renovartstudio.es'; // Ваша пошта
+        $mail->Password = 'm3*KDs90LW,U'; // Ваш пароль або App Password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port = 465;
+        $mail->Port = 587;
 
         $mail->CharSet = 'UTF-8'; 
 
         $mail->setFrom('info@renovartstudio.es', 'Formulario');
-        $mail->addAddress('info@renovartstudio.eu'); 
+        $mail->addAddress('info@renovartstudio.es'); 
 
         $mail->Subject = 'Respuestas del formulario';
         $mail->Body = $message;
