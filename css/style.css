@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 header {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/header-picture.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/header-picture-min.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0 75%;
