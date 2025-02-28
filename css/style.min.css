@@ -511,7 +511,11 @@
     .socials {
         margin: 52px auto 0;
     }
-    .copyright {
+    .footer-num {
         margin-top: 40px;
+        font-size: 20px;
+    }
+    .copyright {
+        margin-top: 20px;
     }
 }

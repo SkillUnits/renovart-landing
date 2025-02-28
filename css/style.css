@@ -4,6 +4,7 @@
 }
 html {
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 body {
     margin: 0;
@@ -76,6 +77,9 @@ nav .logo {
     font-size: 24px;
     font-weight: 500;
     line-height: 29px;
+}
+.nav-num .nav-phone-num:hover {
+    text-decoration: underline;
 }
 .num-button {
     width: 160px;
@@ -587,7 +591,6 @@ section h2 {
 }
 
 .faq {
-    max-width: 664px;
     width: 100%;
     margin: 52px auto 0;
     padding: 67.5px 53px;
@@ -624,7 +627,7 @@ section h2 {
     transition: max-height 1s ease, opacity 0.7s ease;
 }
 .faqs-item .answer p {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 400;
     color: rgba(0, 34, 14, 1);
 }
@@ -789,8 +792,16 @@ footer {
     height: 24px;
     cursor: pointer;
 }
-.copyright {
+.footer-num {
     margin-top: 72px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: center;
+    color: rgba(210, 172, 111, 1);
+}
+.copyright {
+    margin-top: 24px;
     font-size: 14px;
     font-weight: 600;
     line-height: 16px;
