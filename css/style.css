@@ -800,6 +800,9 @@ footer {
     text-align: center;
     color: rgba(210, 172, 111, 1);
 }
+.footer-num:hover {
+    text-decoration: underline;
+}
 .copyright {
     margin-top: 24px;
     font-size: 14px;
