@@ -2,7 +2,7 @@ const questions = [
     { text: "¿Qué tipo de instalación hay que reparar?", answers: ["Piso", "Casa", "Local comercial"], input: "Su opción" },
     { text: "Superficie del terreno (aprox.)", answers: ["Hasta 50 m²", "50–100 m²", "100-200 м²", "Más de 200 m²"] },
     { text: "¿Qué tipo de trabajo se necesita?", answers: ["Renovación completa (llave en mano)", "Reparaciones importantes", "Reparación cosmética"], input: "Otros (especifique)" },
-    { text: "¿En qué etapa se encuentra el objeto?", answers: ["Acabado en bruto", "En proceso de reforma", "Listo, necesita renovación"] },
+    { text: "¿¿Cuál es el presupuesto para la renovación?", answers: ["<10,000€", "10,000-25,000", "25,000-50,000", "50,000-100,000", ">100,000€"] },
     { text: "¿Dónde se encuentra el objeto?", answers: [], input: "Ciudad/zona" },
     { text: "¿Cuándo quiere comenzar la reforma?", answers: ["En un futuro cercano", "Dentro de un mes", "En 2-3 meses"], input: "Otro" },
     { text: "Sus datos de contacto", answers: [], inputs: ["Nombre", "Número de teléfono"] }
