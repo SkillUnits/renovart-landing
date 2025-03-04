@@ -23,9 +23,46 @@
         <script src="scripts/quiz-es.js" type="module"></script>
         <script src="scripts/swiper.js" type="module"></script>
         <script src="scripts/faq-list.js"></script>
+
+        <!-- Meta Pixel Code -->
+        <script>
+            !(function (f, b, e, v, n, t, s) {
+                if (f.fbq) return;
+                n = f.fbq = function () {
+                    n.callMethod
+                        ? n.callMethod.apply(n, arguments)
+                        : n.queue.push(arguments);
+                };
+                if (!f._fbq) f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = "2.0";
+                n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;
+                t.src = v;
+                s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s);
+            })(
+                window,
+                document,
+                "script",
+                "https://connect.facebook.net/en_US/fbevents.js"
+            );
+            fbq("init", "505661395637255");
+            fbq("track", "PageView");
+        </script>
+        <noscript
+            ><img
+                height="1"
+                width="1"
+                style="display: none"
+                src="https://www.facebook.com/tr?id=505661395637255&ev=PageView&noscript=1"
+        /></noscript>
+        <!-- End Meta Pixel Code -->
     </head>
     <body>
-        <!-- Auto git pull test -->
+        <!-- Pixel test -->
         <header>
             <nav>
                 <img
@@ -37,24 +74,42 @@
                 />
                 <div class="nav-container">
                     <div class="nav-lang-switch">
-                        <a href="index.html" class="lang-switch-button active"> ES </a>
-                        <a href="index-en.html" class="lang-switch-button"> EN </a>
+                        <a href="index.html" class="lang-switch-button active">
+                            ES
+                        </a>
+                        <a href="index-en.html" class="lang-switch-button">
+                            EN
+                        </a>
                     </div>
                     <div class="nav-num">
-                        <a href="tel:+34932209622" class="nav-phone-num">+34 932 20 96 22</a>
-                        <a href="tel:+34932209622" class="num-button">Llámenos</a>
+                        <a
+                            id="callLink"
+                            href="tel:+34932209622"
+                            class="nav-phone-num"
+                            >+34 932 20 96 22</a
+                        >
+                        <a
+                            id="callLink"
+                            href="tel:+34932209622"
+                            class="num-button"
+                            >Llámenos</a
+                        >
                     </div>
                 </div>
             </nav>
             <div class="header-content">
                 <h1>
-                    Su reforma perfecta en España: ¡rápida, de alta calidad y sin preocupaciones!
+                    Su reforma perfecta en España: ¡rápida, de alta calidad y
+                    sin preocupaciones!
                 </h1>
                 <p>
-                    Deje una solicitud hoy - medición mañana, ¡reparación estrictamente a tiempo o le pagamos por el retraso!
+                    Deje una solicitud hoy - medición mañana, ¡reparación
+                    estrictamente a tiempo o le pagamos por el retraso!
                 </p>
                 <div class="header-button-container">
-                    <p>Obtenga un cálculo <span class="accent">gratis!</span></p>
+                    <p>
+                        Obtenga un cálculo <span class="accent">gratis!</span>
+                    </p>
                     <a href="#quiz" class="header-button">Asesoramiento</a>
                 </div>
             </div>
@@ -69,7 +124,8 @@
                             <img src="images/benefit-1.png" alt="" />
                         </div>
                         <p>
-                            Mano de obra de alto nivel, materiales de primera calidad, artesanos experimentados.
+                            Mano de obra de alto nivel, materiales de primera
+                            calidad, artesanos experimentados.
                         </p>
                     </div>
                     <div class="benefits-item">
@@ -77,7 +133,10 @@
                             <h2>Rapidez</h2>
                             <img src="images/benefit-2.png" alt="" />
                         </div>
-                        <p>Realizamos las mediciones en las 24 horas siguientes a la presentación de la solicitud.</p>
+                        <p>
+                            Realizamos las mediciones en las 24 horas siguientes
+                            a la presentación de la solicitud.
+                        </p>
                     </div>
                     <div class="benefits-item">
                         <div class="benefit-title">
@@ -85,7 +144,9 @@
                             <img src="images/benefit-3.png" alt="" />
                         </div>
                         <p>
-                            Garantía de cumplimiento de los plazos de reparación. Si se incumple el plazo, se abona una indemnización.
+                            Garantía de cumplimiento de los plazos de
+                            reparación. Si se incumple el plazo, se abona una
+                            indemnización.
                         </p>
                     </div>
                 </div>
@@ -130,7 +191,8 @@
                 <h2>Averigüe el coste de su reparación en 1 minuto!</h2>
                 <div class="progress-bar-text">
                     <p>
-                        Responda a algunas preguntas y le prepararemos un presupuesto personalizado
+                        Responda a algunas preguntas y le prepararemos un
+                        presupuesto personalizado
                     </p>
                     <p id="progress-percent" class="progress-percent">0%</p>
                 </div>
@@ -146,7 +208,12 @@
                     <button id="next-btn">Siguiente</button>
                     <button id="back-btn" style="display: none">Volver</button>
                 </div>
-                <img id="successful" class="successful" src="images/check-circle-svgrepo-com.svg" alt="">
+                <img
+                    id="successful"
+                    class="successful"
+                    src="images/check-circle-svgrepo-com.svg"
+                    alt=""
+                />
                 <div class="confidentiality" id="confidentiality">
                     <img
                         src="images/Warning Shield.png"
@@ -155,7 +222,8 @@
                         height="32"
                     />
                     <p>
-                        Mantenemos la confidencialidad de sus datos y los usamos solo para ponernos en contacto con usted.
+                        Mantenemos la confidencialidad de sus datos y los usamos
+                        solo para ponernos en contacto con usted.
                     </p>
                 </div>
             </section>
@@ -163,9 +231,11 @@
             <section class="certificate-section">
                 <h2>Nuestro certificado de garantía</h2>
                 <p>
-                    Ofrecemos una garantía sobre la realización de los trabajos y los materiales utilizados. Consulte nuestro certificado, que avala el alto nivel de nuestro servicio y fiabilidad.
+                    Ofrecemos una garantía sobre la realización de los trabajos
+                    y los materiales utilizados. Consulte nuestro certificado,
+                    que avala el alto nivel de nuestro servicio y fiabilidad.
                 </p>
-                <div class="certificate-container" style="max-width: 618px;">
+                <div class="certificate-container" style="max-width: 618px">
                     <a
                         href="images/certificate.png"
                         class="certificate-icon"
@@ -183,7 +253,8 @@
                         <a
                             href="images/certificate.png"
                             class="certificate-download"
-                            download style="max-width: 242px;"
+                            download
+                            style="max-width: 242px"
                             >Descargar el certificado</a
                         >
                     </div>
@@ -195,28 +266,40 @@
                 <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <video src="images/rev-1.MOV" type="video/mov" controls></video>
+                            <video
+                                src="images/rev-1.MOV"
+                                type="video/mov"
+                                controls
+                            ></video>
                         </div>
                         <div class="swiper-slide">
-                            <video src="images/rev-2.MOV" type="video/mov" controls></video>
+                            <video
+                                src="images/rev-2.MOV"
+                                type="video/mov"
+                                controls
+                            ></video>
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/rev-3.jpg" alt="">
+                            <img src="images/rev-3.jpg" alt="" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/rev-4.jpg" alt="">
+                            <img src="images/rev-4.jpg" alt="" />
                         </div>
                         <div class="swiper-slide">
-                            <video src="images/rev-5.MOV" type="video/mov" controls></video>
+                            <video
+                                src="images/rev-5.MOV"
+                                type="video/mov"
+                                controls
+                            ></video>
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/rev-6.jpg" alt="">
+                            <img src="images/rev-6.jpg" alt="" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/rev-7.jpg" alt="">
+                            <img src="images/rev-7.jpg" alt="" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/rev-8.jpg" alt="">
+                            <img src="images/rev-8.jpg" alt="" />
                         </div>
                     </div>
                     <div class="swiper-button-prev desktop"></div>
@@ -232,7 +315,8 @@
                         <div class="faqs-item">
                             <div class="question">
                                 <p>
-                                    ¿Qué garantías ofrecen sobre el trabajo realizado?
+                                    ¿Qué garantías ofrecen sobre el trabajo
+                                    realizado?
                                 </p>
                                 <img
                                     class="chevron"
@@ -244,14 +328,18 @@
                             </div>
                             <div id="answer" class="answer">
                                 <p>
-                                    Ofrecemos una garantía sobre la calidad de los trabajos realizados y los materiales utilizados. Si no cumplimos con el plazo acordado, le compensaremos.
+                                    Ofrecemos una garantía sobre la calidad de
+                                    los trabajos realizados y los materiales
+                                    utilizados. Si no cumplimos con el plazo
+                                    acordado, le compensaremos.
                                 </p>
                             </div>
                         </div>
                         <div class="faqs-item">
                             <div class="question">
                                 <p>
-                                    ¿Cuánto tiempo tardaré en recibir los resultados después de enviar la solicitud?
+                                    ¿Cuánto tiempo tardaré en recibir los
+                                    resultados después de enviar la solicitud?
                                 </p>
                                 <img
                                     class="chevron"
@@ -263,30 +351,19 @@
                             </div>
                             <div id="answer" class="answer">
                                 <p>
-                                    La medición se realiza dentro de las 24 horas posteriores a la solicitud, y las obras comenzarán lo antes posible, según sus preferencias.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="faqs-item">
-                            <div class="question">
-                                <p>¿Cómo puedo hacer un seguimiento del proceso de la reforma?</p>
-                                <img
-                                    class="chevron"
-                                    src="images/down-chevron.png"
-                                    alt=""
-                                    width="24"
-                                    height="24"
-                                />
-                            </div>
-                            <div id="answer" class="answer">
-                                <p>
-                                    Proporcionamos actualizaciones regulares sobre las fases de la reforma y garantizamos el cumplimiento de los plazos.
+                                    La medición se realiza dentro de las 24
+                                    horas posteriores a la solicitud, y las
+                                    obras comenzarán lo antes posible, según sus
+                                    preferencias.
                                 </p>
                             </div>
                         </div>
                         <div class="faqs-item">
                             <div class="question">
-                                <p>¿Cómo puedo contactarlos para una consulta?</p>
+                                <p>
+                                    ¿Cómo puedo hacer un seguimiento del proceso
+                                    de la reforma?
+                                </p>
                                 <img
                                     class="chevron"
                                     src="images/down-chevron.png"
@@ -297,13 +374,17 @@
                             </div>
                             <div id="answer" class="answer">
                                 <p>
-                                    Puede contactarnos a través del formulario en el sitio web, completando sus datos de contacto, o por teléfono, que encontrará en nuestra página.
+                                    Proporcionamos actualizaciones regulares
+                                    sobre las fases de la reforma y garantizamos
+                                    el cumplimiento de los plazos.
                                 </p>
                             </div>
                         </div>
                         <div class="faqs-item">
                             <div class="question">
-                                <p>¿Cómo puedo obtener un presupuesto exacto para la reforma?</p>
+                                <p>
+                                    ¿Cómo puedo contactarlos para una consulta?
+                                </p>
                                 <img
                                     class="chevron"
                                     src="images/down-chevron.png"
@@ -314,7 +395,33 @@
                             </div>
                             <div id="answer" class="answer">
                                 <p>
-                                    Para obtener un presupuesto exacto, debe completar el cuestionario en nuestro sitio web. Prepararemos una estimación personalizada en 1 minuto.
+                                    Puede contactarnos a través del formulario
+                                    en el sitio web, completando sus datos de
+                                    contacto, o por teléfono, que encontrará en
+                                    nuestra página.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faqs-item">
+                            <div class="question">
+                                <p>
+                                    ¿Cómo puedo obtener un presupuesto exacto
+                                    para la reforma?
+                                </p>
+                                <img
+                                    class="chevron"
+                                    src="images/down-chevron.png"
+                                    alt=""
+                                    width="24"
+                                    height="24"
+                                />
+                            </div>
+                            <div id="answer" class="answer">
+                                <p>
+                                    Para obtener un presupuesto exacto, debe
+                                    completar el cuestionario en nuestro sitio
+                                    web. Prepararemos una estimación
+                                    personalizada en 1 minuto.
                                 </p>
                             </div>
                         </div>
@@ -335,15 +442,21 @@
                         <h2>REFORMA</h2>
                         <h2
                             class="second"
-                            style="text-align: center !important; margin-left: 4%"
+                            style="
+                                text-align: center !important;
+                                margin-left: 4%;
+                            "
                         >
                             <span class="diff">sin</span>
                         </h2>
-                        <h2 style="text-align: right !important">preocupaciones</h2>
+                        <h2 style="text-align: right !important">
+                            preocupaciones
+                        </h2>
                     </div>
                     <div class="renovation-button-container">
                         <p>
-                            Empiece su reforma sin riesgos ni preocupaciones. ¡Solicite ahora su presupuesto gratuito!
+                            Empiece su reforma sin riesgos ni preocupaciones.
+                            ¡Solicite ahora su presupuesto gratuito!
                         </p>
                         <a href="#quiz" class="renovation-button"
                             >Obtener presupuesto gratuito</a
@@ -376,11 +489,38 @@
                 loading="lazy"
             />
             <p class="footer-text">
-                Deja que Renovart haga realidad tu visión. Nuestro equipo de diseñadores de interiores, arquitectos y contratistas altamente capacitados está dedicado a ofrecer servicios integrales de renovación de hogares. Desde la planificación inicial hasta la ejecución final, ofrecemos una solución llave en mano que se encarga de cada detalle.
+                Deja que Renovart haga realidad tu visión. Nuestro equipo de
+                diseñadores de interiores, arquitectos y contratistas altamente
+                capacitados está dedicado a ofrecer servicios integrales de
+                renovación de hogares. Desde la planificación inicial hasta la
+                ejecución final, ofrecemos una solución llave en mano que se
+                encarga de cada detalle.
             </p>
-            
-            <a class="footer-num" href="tel:+34932209622">+34 932 20 96 22</a>
-            <p class="copyright">Copyright 2025 © Todos los derechos reservados</p>
+
+            <a id="callLink" class="footer-num" href="tel:+34932209622"
+                >+34 932 20 96 22</a
+            >
+            <p class="copyright">
+                Copyright 2025 © Todos los derechos reservados
+            </p>
         </footer>
+
+        <script>
+            // Відстеження події "відправлення форми"
+            document
+                .getElementById("quiz")
+                .addEventListener("submit", function (event) {
+                    event.preventDefault();
+                    fbq("track", "Lead");
+                    this.submit();
+                });
+
+            // Відстеження події "клік по телефону"
+            document
+                .getElementById("callLink")
+                .addEventListener("click", function () {
+                    fbq("track", "Contact");
+                });
+        </script>
     </body>
 </html>

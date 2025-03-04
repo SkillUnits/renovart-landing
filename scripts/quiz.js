@@ -19,10 +19,10 @@ function updateProgress() {
 
 function loadQuestion() {
     const questionData = questions[currentQuestion];
-    document.getElementById("question-count").textContent = `Question ${currentQuestion + 1} of 7`;
+    document.getElementById("question-count").textContent = `Pregunta ${currentQuestion + 1} de 7`;
     document.getElementById("question-text").textContent = questionData.text;
     updateProgress();
-    
+
     const answersContainer = document.getElementById("answers-container");
     answersContainer.innerHTML = "";
     questionData.answers.forEach(answer => {
@@ -31,7 +31,7 @@ function loadQuestion() {
         button.onclick = () => selectAnswer(answer);
         answersContainer.appendChild(button);
     });
-    
+
     const inputContainer = document.getElementById("input-container");
     inputContainer.innerHTML = "";
     if (questionData.input) {
@@ -51,6 +51,13 @@ function loadQuestion() {
     document.getElementById("back-btn").style.display = currentQuestion > 0 ? "inline-block" : "none";
     document.getElementById("confidentiality").style.display = currentQuestion === questions.length - 1 ? "flex" : "none";
     document.getElementById("answers-container").style.marginTop = currentQuestion === questions.length - 1 ? "8px" : "20px";
+
+    const nextBtn = document.getElementById("next-btn");
+    if (currentQuestion === questions.length - 1) {
+        nextBtn.type = "submit"; 
+    } else {
+        nextBtn.type = "button"; 
+    }
 }
 
 function selectAnswer(answer) {

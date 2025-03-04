@@ -22,7 +22,7 @@ function loadQuestion() {
     document.getElementById("question-count").textContent = `Pregunta ${currentQuestion + 1} de 7`;
     document.getElementById("question-text").textContent = questionData.text;
     updateProgress();
-    
+
     const answersContainer = document.getElementById("answers-container");
     answersContainer.innerHTML = "";
     questionData.answers.forEach(answer => {
@@ -31,7 +31,7 @@ function loadQuestion() {
         button.onclick = () => selectAnswer(answer);
         answersContainer.appendChild(button);
     });
-    
+
     const inputContainer = document.getElementById("input-container");
     inputContainer.innerHTML = "";
     if (questionData.input) {
@@ -51,6 +51,13 @@ function loadQuestion() {
     document.getElementById("back-btn").style.display = currentQuestion > 0 ? "inline-block" : "none";
     document.getElementById("confidentiality").style.display = currentQuestion === questions.length - 1 ? "flex" : "none";
     document.getElementById("answers-container").style.marginTop = currentQuestion === questions.length - 1 ? "8px" : "20px";
+
+    const nextBtn = document.getElementById("next-btn");
+    if (currentQuestion === questions.length - 1) {
+        nextBtn.type = "submit"; 
+    } else {
+        nextBtn.type = "button"; 
+    }
 }
 
 function selectAnswer(answer) {
@@ -66,15 +73,15 @@ function nextQuestion() {
     let inputValues = Array.from(inputs).map(input => input.value.trim()).filter(value => value !== "");
 
     if (inputValues.length > 0) {
-        userAnswers[currentQuestion] = { 
-            question: questions[currentQuestion].text, 
-            answer: inputValues.join(", ") 
+        userAnswers[currentQuestion] = {
+            question: questions[currentQuestion].text,
+            answer: inputValues.join(", ")
         };
     } else if (userAnswers[currentQuestion]) {
     } else {
-        userAnswers[currentQuestion] = { 
-            question: questions[currentQuestion].text, 
-            answer: "No se proporcionó respuesta"  
+        userAnswers[currentQuestion] = {
+            question: questions[currentQuestion].text,
+            answer: "No se proporcionó respuesta"
         };
     }
 
@@ -99,13 +106,13 @@ function sendFormData() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(userAnswers)
     })
-    .then(response => response.text())
-    .then(data => {
-        console.log("¡Datos enviados con éxito!");
-    })
-    .catch(error => {
-        console.error("Error al enviar los datos:", error);
-    });
+        .then(response => response.text())
+        .then(data => {
+            console.log("¡Datos enviados con éxito!");
+        })
+        .catch(error => {
+            console.error("Error al enviar los datos:", error);
+        });
 }
 
 function prevQuestion() {
