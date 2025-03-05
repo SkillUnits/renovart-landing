@@ -40,10 +40,16 @@ function loadQuestion() {
         input.placeholder = questionData.input;
         inputContainer.appendChild(input);
     } else if (questionData.inputs) {
-        questionData.inputs.forEach(placeholder => {
+        questionData.inputs.forEach((placeholder, index) => {
             const input = document.createElement("input");
             input.type = "text";
             input.placeholder = placeholder;
+
+            // Робимо останні два інпута обов'язковими
+            if (currentQuestion === questions.length - 1) {
+                input.required = true;
+            }
+
             inputContainer.appendChild(input);
         });
     }
@@ -60,28 +66,39 @@ function loadQuestion() {
     }
 }
 
-function selectAnswer(answer) {
-    userAnswers[currentQuestion] = { question: questions[currentQuestion].text, answer };
-    console.log(userAnswers);
-    nextQuestion();
-}
-
 function nextQuestion() {
     const inputContainer = document.getElementById("input-container");
     const inputs = inputContainer.querySelectorAll("input");
 
-    let inputValues = Array.from(inputs).map(input => input.value.trim()).filter(value => value !== "");
+    let inputValues = Array.from(inputs).map(input => input.value.trim());
+
+    // Якщо це останнє питання, перевіряємо обов'язкові поля
+    if (currentQuestion === questions.length - 1) {
+        if (inputValues.some(value => value === "")) {
+            alert("Por favor, complete los campos obligatorios: Nombre y Número de teléfono.");
+            return;
+        }
+    }
+
+    const answersContainer = document.getElementById("answers-container");
+    const selectedButton = answersContainer.querySelector("button.selected");
+
+    const hasAnswer = selectedButton || inputValues.some(value => value !== "");
+
+    if (!hasAnswer) {
+        // alert("Por favor, seleccione una opción o complete el campo obligatorio antes de continuar.");
+        return;
+    }
 
     if (inputValues.length > 0) {
         userAnswers[currentQuestion] = {
             question: questions[currentQuestion].text,
             answer: inputValues.join(", ")
         };
-    } else if (userAnswers[currentQuestion]) {
-    } else {
+    } else if (selectedButton) {
         userAnswers[currentQuestion] = {
             question: questions[currentQuestion].text,
-            answer: "No se proporcionó respuesta"
+            answer: selectedButton.textContent
         };
     }
 
@@ -90,13 +107,23 @@ function nextQuestion() {
         loadQuestion();
     } else {
         sendFormData();
-
         document.getElementById("progress-percent").textContent = `100%`;
         document.getElementById("progress-bar").value = 100;
         document.getElementById("question-container").style.display = "none";
         document.getElementById("navigation").style.display = "none";
         document.getElementById("successful").style.display = "block";
     }
+}
+
+function selectAnswer(answer) {
+    userAnswers[currentQuestion] = { question: questions[currentQuestion].text, answer };
+
+    document.querySelectorAll("#answers-container button").forEach(btn => btn.classList.remove("selected"));
+
+    event.target.classList.add("selected");
+
+    console.log(userAnswers);
+    nextQuestion();
 }
 
 
