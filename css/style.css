@@ -440,6 +440,18 @@ section h2 {
     color: rgba(128, 128, 128, 1);
 }
 
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+#input-container #data-consent {
+    width: 24px;
+    height: 24px;
+}
+
 .certificate-section h2 {
     color: rgba(210, 172, 111, 1);
 }

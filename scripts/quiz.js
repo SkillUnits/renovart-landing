@@ -19,7 +19,7 @@ function updateProgress() {
 
 function loadQuestion() {
     const questionData = questions[currentQuestion];
-    document.getElementById("question-count").textContent = `Question ${currentQuestion + 1} of 7`;
+    document.getElementById("question-count").textContent = `Pregunta ${currentQuestion + 1} de 7`;
     document.getElementById("question-text").textContent = questionData.text;
     updateProgress();
 
@@ -34,13 +34,14 @@ function loadQuestion() {
 
     const inputContainer = document.getElementById("input-container");
     inputContainer.innerHTML = "";
+
     if (questionData.input) {
         const input = document.createElement("input");
         input.type = "text";
         input.placeholder = questionData.input;
         inputContainer.appendChild(input);
     } else if (questionData.inputs) {
-        questionData.inputs.forEach((placeholder, index) => {
+        questionData.inputs.forEach((placeholder) => {
             const input = document.createElement("input");
             input.type = "text";
             input.placeholder = placeholder;
@@ -52,6 +53,25 @@ function loadQuestion() {
 
             inputContainer.appendChild(input);
         });
+
+        // Додаємо чекбокс на дозвіл обробки даних
+        if (currentQuestion === questions.length - 1) {
+            const checkboxContainer = document.createElement("div");
+            checkboxContainer.className = "checkbox-container"
+            checkboxContainer.style.marginTop = "10px";
+
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.id = "data-consent";
+
+            const label = document.createElement("label");
+            label.htmlFor = "data-consent";
+            label.textContent = "I agree to the processing of my personal data";
+
+            checkboxContainer.appendChild(checkbox);
+            checkboxContainer.appendChild(label);
+            inputContainer.appendChild(checkboxContainer);
+        }
     }
 
     document.getElementById("back-btn").style.display = currentQuestion > 0 ? "inline-block" : "none";
@@ -59,23 +79,25 @@ function loadQuestion() {
     document.getElementById("answers-container").style.marginTop = currentQuestion === questions.length - 1 ? "8px" : "20px";
 
     const nextBtn = document.getElementById("next-btn");
-    if (currentQuestion === questions.length - 1) {
-        nextBtn.type = "submit"; 
-    } else {
-        nextBtn.type = "button"; 
-    }
+    nextBtn.type = currentQuestion === questions.length - 1 ? "submit" : "button";
 }
 
 function nextQuestion() {
     const inputContainer = document.getElementById("input-container");
-    const inputs = inputContainer.querySelectorAll("input");
+    const inputs = inputContainer.querySelectorAll("input[type='text']");
+    const checkbox = document.getElementById("data-consent");
 
     let inputValues = Array.from(inputs).map(input => input.value.trim());
 
-    // Якщо це останнє питання, перевіряємо обов'язкові поля
+    // Якщо це останнє питання, перевіряємо обов'язкові поля та чекбокс
     if (currentQuestion === questions.length - 1) {
         if (inputValues.some(value => value === "")) {
             alert("Please complete the required fields: Name and Phone Number.");
+            return;
+        }
+
+        if (!checkbox.checked) {
+            alert("You must agree to the processing of your personal data to continue.");
             return;
         }
     }
@@ -86,7 +108,7 @@ function nextQuestion() {
     const hasAnswer = selectedButton || inputValues.some(value => value !== "");
 
     if (!hasAnswer) {
-        // alert("Por favor, seleccione una opción o complete el campo obligatorio antes de continuar.");
+        alert("Please select an option or complete the required field before proceeding.");
         return;
     }
 
