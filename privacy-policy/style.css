@@ -1,0 +1,44 @@
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6, p, a {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 80px auto 50px;
+    max-width: 980px;
+    width: 90%;
+}
+a {
+    font-size: 20px;
+}
+p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+h1 {
+    font-size: 30px;
+    margin: 20px 0 10px 0;
+}
+h2 {
+    font-size: 24px;
+    margin: 20px 0 10px 0;
+}
+h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+li {
+    font-size: 18px;
+}

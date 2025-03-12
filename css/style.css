@@ -791,6 +791,14 @@ footer {
     line-height: 29px;
     color: rgba(210, 172, 111, 1);
 }
+.privacy-policy {
+    margin-top: 24px;
+    font-size: 20px;
+    color: #fff;
+}
+.privacy-policy:hover {
+    text-decoration: underline;
+}
 
 .socials {
     margin: 64px auto 0;
@@ -816,7 +824,7 @@ footer {
     text-decoration: underline;
 }
 .copyright {
-    margin-top: 24px;
+    margin-top: 12px;
     font-size: 14px;
     font-weight: 600;
     line-height: 16px;
