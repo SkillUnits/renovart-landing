@@ -792,7 +792,7 @@ footer {
     color: rgba(210, 172, 111, 1);
 }
 .privacy-policy {
-    margin-top: 24px;
+    margin-top: 0;
     font-size: 20px;
     color: #fff;
 }
@@ -841,4 +841,12 @@ footer {
     width: 72px;
     height: 72px;
     margin-top: 30px;
+}
+
+.privacy-container {
+    margin: 20px auto 0;
+    max-width: 700px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
 }
