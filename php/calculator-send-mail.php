@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $message = "Nuevo formulario recibido:\n\n";
     $message .= "Nombre: $name\n";
     $message .= "Teléfono: $phone\n";
-    $message .= "Comentario: $comment\n";
+    $message .= "Comentario: $comments\n";
 
     $mail = new PHPMailer(true);
     try {
