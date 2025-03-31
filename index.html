@@ -1180,15 +1180,20 @@
                 .getElementById("repair-form")
                 .addEventListener("submit", function (event) {
                     event.preventDefault();
+
+                    // Отримання даних форми
                     let formData = new FormData(this);
 
+                    // Відправка даних на сервер
                     fetch("php/calculator-send-mail.php", {
                         method: "POST",
                         body: formData,
                     })
-                        .then((response) => response.text())
-                        .then((data) => alert(data))
-                        .catch((error) => console.error("Error:", error));
+                        .then((response) => response.text()) // Отримуємо відповідь
+                        .then((data) => {
+                            console.log("Server Response:", data); // Виведення відповіді сервера в консоль
+                        })
+                        .catch((error) => console.error("Error:", error)); // Обробка помилки
                 });
         </script>
     </body>
