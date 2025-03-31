@@ -1,3 +1,85 @@
+@media screen and (max-width: 1330px) {
+    .header-content {
+        margin: 0 auto 0;
+    }
+    .header-content h1 {
+        max-width: 1400px;
+        font-size: 36px;
+        line-height: 100%;
+    }
+    .calculator {
+        margin-top: 20px;
+    }
+
+    .calculator {
+        margin-top: 12px;
+        min-height: 490px;
+    }
+    .calculator-container {
+        padding: 12px 8px;
+    }
+    .calculator-container h2 {
+        font-size: 20px;
+    }
+    .calculator-container .form-section h3 {
+        font-size: 18px;
+    }
+    .calculator-container .form-section h4 {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    .calculator-container .form-section p {
+        font-size: 20px;
+    }
+
+    .calculator-container .form-section div {
+        gap: 8px;
+        margin-top: 18px;
+    }
+    .calculator-container .form-section label {
+        font-size: 18px;
+    }
+    .calculator-input input {
+        font-size: 18px;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 11px;
+        left: 8px;
+        height: 14px;
+        width: 14px;
+        background-color: none;
+        border: 1px solid rgba(0, 0, 0, 1);
+    }
+
+    .form-section .next-step {
+        position: absolute;
+        right: 8px;
+        bottom: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        height: 24px;
+        width: 24px;
+    }
+    .paragraph-container .paragraph-image {
+        display: none;
+    }
+
+    .form-section .form-section-contacts input {
+        height: 35px;
+        font-size: 16px;
+    }
+    .form-section .form-section-contacts textarea {
+        height: 79px;
+        font-size: 16px;
+    }
+}
+
 @media screen and (max-width: 1100px) {
     header {
         max-height: 664px;
@@ -31,7 +113,7 @@
 
     .header-content {
         width: 96%;
-        margin: 32px auto 0;
+        margin: 0 auto 0;
     }
     .header-content h1 {
         max-width: 602px;
