@@ -21,6 +21,7 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
         <script src="scripts/quiz-es.js" type="module"></script>
+        <!-- <script src="scripts/calculator-es.js" type="module"></script> -->
         <script src="scripts/swiper.js" type="module"></script>
         <script src="scripts/faq-list.js"></script>
 
@@ -98,19 +99,515 @@
                 </div>
             </nav>
             <div class="header-content">
-                <h1>
-                    Su reforma perfecta en España: ¡rápida, de alta calidad y
-                    sin preocupaciones!
-                </h1>
-                <p>
-                    Deje una solicitud hoy - medición mañana, ¡reparación
-                    estrictamente a tiempo o le pagamos por el retraso!
-                </p>
-                <div class="header-button-container">
-                    <p>
-                        Obtenga un cálculo <span class="accent">gratis!</span>
-                    </p>
-                    <a href="#quiz" class="header-button">Asesoramiento</a>
+                <h1>¡Calcule el costo de la renovación en un minuto!</h1>
+                <div class="calculator">
+                    <img
+                        class="paint-roller-image"
+                        src="images/Paint_Roller_Background.png"
+                        alt=""
+                    />
+                    <div class="calculator-container">
+                        <h2 id="calculatorHeader">Calculadora de reparación</h2>
+                        <form id="repair-form">
+                            <div class="form-section" id="step1">
+                                <h3>1. Tipo de reparación</h3>
+                                <h4>
+                                    ¿Qué tipo de reparación necesita? (Elija una
+                                    opción)
+                                </h4>
+                                <div>
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="repair_type"
+                                            value="500"
+                                        />
+                                        <span class="checkmark"></span>
+                                        Reparación de baño</label
+                                    >
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="repair_type"
+                                            value="700"
+                                        />
+                                        <span class="checkmark"></span>
+                                        Reparación de cocina</label
+                                    >
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="repair_type"
+                                            value="1000"
+                                        />
+                                        <span class="checkmark"></span>
+                                        Reparación completa</label
+                                    >
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="repair_type"
+                                            value="50"
+                                        />
+                                        <span class="checkmark"></span>
+                                        Pintura de interiores</label
+                                    >
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="repair_type"
+                                            value="80"
+                                        />
+                                        <span class="checkmark"></span>
+                                        Reemplazo de suelos</label
+                                    >
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="repair_type"
+                                            value="120"
+                                        />
+                                        <span class="checkmark"></span>
+                                        Aislamiento térmico</label
+                                    >
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="repair_type"
+                                            value="200"
+                                        />
+                                        <span class="checkmark"></span>
+                                        Reparación de fachada</label
+                                    >
+                                </div>
+                                <button
+                                    class="next-step"
+                                    type="button"
+                                    onclick="nextStep(1)"
+                                >
+                                    <img
+                                        src="images/arrow-forward-simple.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+
+                            <div class="form-section" id="step2">
+                                <h3>2. Tamaño del espacio</h3>
+                                <h4>
+                                    ¿Cuál es el área aproximada del espacio para
+                                    la reparación?
+                                </h4>
+                                <div class="calculator-input">
+                                    <label for="">Metros cuadrados: </label>
+                                    <input type="number" id="area" required />
+                                </div>
+
+                                <button
+                                    class="next-step"
+                                    type="button"
+                                    onclick="nextStep(2)"
+                                >
+                                    <img
+                                        src="images/arrow-forward-simple.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+
+                            <div class="form-section" id="step3">
+                                <h3>3. Calidad de los materiales</h3>
+                                <h4>¿Qué calidad de materiales prefieres?</h4>
+                                <div>
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="material_quality"
+                                            value="1.0"
+                                        />
+                                        <span class="checkmark"></span>
+                                        Básica (Opción económica, acabado
+                                        estándar)</label
+                                    >
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="material_quality"
+                                            value="1.0"
+                                        />
+                                        <span class="checkmark"></span>
+                                        Estándar (Materiales de gama media,
+                                        trabajos de acabado modernos)</label
+                                    >
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="material_quality"
+                                            value="1.0"
+                                        /><span class="checkmark"></span>
+                                        Premium (Materiales de alta calidad,
+                                        acabados personalizados)</label
+                                    >
+                                </div>
+
+                                <button
+                                    class="next-step"
+                                    type="button"
+                                    onclick="nextStep(3)"
+                                >
+                                    <img
+                                        src="images/arrow-forward-simple.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+
+                            <div class="form-section" id="step4">
+                                <h3>4. Servicios adicionales</h3>
+                                <h4>
+                                    ¿Es necesario cambiar la instalación
+                                    eléctrica?
+                                </h4>
+                                <div>
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="extra_wiring"
+                                            value="150"
+                                        /><span class="checkmark"></span> Sí,
+                                        nueva instalación</label
+                                    >
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="extra_wiring"
+                                            value="50"
+                                        /><span class="checkmark"></span> Sí,
+                                        solo cambio de cables</label
+                                    >
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="extra_wiring"
+                                            value="0"
+                                        /><span class="checkmark"></span>
+                                        No</label
+                                    >
+                                </div>
+
+                                <h4>¿Es necesario cambiar la fontanería?</h4>
+                                <div>
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="extra_pipes"
+                                            value="150"
+                                        /><span class="checkmark"></span> Sí,
+                                        reemplazo completo de tuberías</label
+                                    >
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="extra_pipes"
+                                            value="50"
+                                        /><span class="checkmark"></span> Sí,
+                                        pero solo en el baño/cocina</label
+                                    >
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="extra_pipes"
+                                            value="0"
+                                        /><span class="checkmark"></span>
+                                        No</label
+                                    >
+                                </div>
+
+                                <button
+                                    class="next-step"
+                                    type="button"
+                                    onclick="nextStep(4)"
+                                >
+                                    <img
+                                        src="images/arrow-forward-simple.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+
+                            <div class="form-section" id="step5">
+                                <h3>4. Servicios adicionales</h3>
+                                <h4>
+                                    ¿Es necesario el aislamiento térmico o
+                                    acústico?
+                                </h4>
+                                <div>
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="extra_isolation"
+                                            value="150"
+                                        /><span class="checkmark"></span> Sí,
+                                        aislamiento térmico de paredes</label
+                                    >
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="extra_isolation"
+                                            value="50"
+                                        /><span class="checkmark"></span> Sí,
+                                        aislamiento acústico</label
+                                    >
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="extra_isolation"
+                                            value="0"
+                                        /><span class="checkmark"></span>
+                                        No</label
+                                    >
+                                </div>
+
+                                <h4>¿Quieres reemplazar puertas o ventanas?</h4>
+                                <div>
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="extra_doors"
+                                            value="150"
+                                        /><span class="checkmark"></span> Sí,
+                                        reemplazar todas las puertas
+                                        interiores</label
+                                    >
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="extra_doors"
+                                            value="50"
+                                        /><span class="checkmark"></span> Sí,
+                                        reemplazar ventanas por PVC</label
+                                    >
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="extra_doors"
+                                            value="0"
+                                        /><span class="checkmark"></span>
+                                        No</label
+                                    >
+                                </div>
+
+                                <button
+                                    class="next-step"
+                                    type="button"
+                                    onclick="nextStep(5)"
+                                >
+                                    <img
+                                        src="images/arrow-forward-simple.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+
+                            <div class="form-section" id="step6">
+                                <h3>4. Servicios adicionales</h3>
+                                <h4>
+                                    ¿Es necesario instalar calefacción o aire
+                                    acondicionado?
+                                </h4>
+                                <div>
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="extra_cond"
+                                            value="150"
+                                        /><span class="checkmark"></span> Sí,
+                                        suelo radiante</label
+                                    >
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="extra_cond"
+                                            value="50"
+                                        /><span class="checkmark"></span> Sí,
+                                        aire acondicionado</label
+                                    >
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="extra_cond"
+                                            value="0"
+                                        /><span class="checkmark"></span>
+                                        No</label
+                                    >
+                                </div>
+
+                                <button
+                                    class="next-step"
+                                    type="button"
+                                    onclick="nextStep(6)"
+                                >
+                                    <img
+                                        src="images/arrow-forward-simple.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+
+                            <div class="form-section" id="step7">
+                                <h3>5. Gastos administrativos</h3>
+                                <h4>
+                                    ¿Necesitas ayuda para obtener permisos y
+                                    licencias?
+                                </h4>
+                                <div>
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="admin_license"
+                                            value="500"
+                                        /><span class="checkmark"></span> Sí,
+                                        necesito ayuda para tramitar los
+                                        documentos</label
+                                    >
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="admin_license"
+                                            value="0"
+                                        /><span class="checkmark"></span> No, ya
+                                        tengo los permisos</label
+                                    >
+                                </div>
+
+                                <h4>
+                                    ¿Es necesaria una consulta con un
+                                    arquitecto?
+                                </h4>
+                                <div>
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="admin_consult"
+                                            value="0"
+                                        /><span class="checkmark"></span>
+                                        Sí</label
+                                    >
+                                    <label class="radio-container"
+                                        ><input
+                                            type="radio"
+                                            name="admin_consult"
+                                            value="0"
+                                        /><span class="checkmark"></span>
+                                        No</label
+                                    >
+                                </div>
+
+                                <button
+                                    class="next-step"
+                                    type="button"
+                                    onclick="nextStep(7); calculateCost(); hideHeader()"
+                                >
+                                    <img
+                                        src="images/arrow-forward-simple.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+
+                            <div class="form-section" id="step8">
+                                <div class="paragraph-container">
+                                    <img
+                                        class="paragraph-image"
+                                        src="images/drill.png"
+                                        alt=""
+                                    />
+                                    <p class="sum-paragraph">
+                                        ¡Gracias!<br />
+                                        El coste estimado de su reparación es a
+                                        partir de
+                                        <span class="calculator-sum"
+                                            ><span id="sum">0</span> euros</span
+                                        >. Para un cálculo detallado, déjanos
+                                        tus datos y nuestros gestores se pondrán
+                                        en contacto contigo.
+                                    </p>
+                                </div>
+
+                                <button
+                                    class="fill-button"
+                                    style="
+                                        margin: 16px auto 0;
+                                        text-decoration: underline;
+                                    "
+                                    type="button"
+                                    onclick="nextStep(8)"
+                                >
+                                    Rellenar el formulario
+                                </button>
+                            </div>
+
+                            <div
+                                class="form-section"
+                                id="step9"
+                                style="margin-top: 45px"
+                            >
+                                <h3>
+                                    Deje sus datos para continuar con el
+                                    contacto
+                                </h3>
+                                <div>
+                                    <label class="form-section-contacts">
+                                        <input
+                                            type="text"
+                                            id="name"
+                                            placeholder="Tu nombre*"
+                                            required
+                                    /></label>
+                                    <label class="form-section-contacts">
+                                        <input
+                                            type="tel"
+                                            id="phone"
+                                            placeholder="Tu número de teléfono*"
+                                            required
+                                    /></label>
+                                    <label class="form-section-contacts">
+                                        <textarea
+                                            id="comments"
+                                            placeholder="Comentarios adicionales sobre la reparación"
+                                        ></textarea>
+                                    </label>
+                                    <p class="caption">
+                                        *El campo es obligatorio
+                                    </p>
+                                </div>
+
+                                <button
+                                    class="fill-button"
+                                    style="margin: 20px 0 0; width: 100%"
+                                    type="submit"
+                                    onclick="nextStep(9)"
+                                >
+                                    Enviar
+                                </button>
+                            </div>
+
+                            <div class="form-section" id="step10">
+                                <div class="paragraph-container">
+                                    <img
+                                        class="paragraph-image"
+                                        src="images/mail-open.png"
+                                        alt=""
+                                    />
+                                    <p class="sum-paragraph">
+                                        ¡Hemos recibido su solicitud! Pronto,
+                                        nuestro gerente se pondrá en contacto
+                                        con usted.
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </header>
@@ -502,10 +999,14 @@
             >
 
             <div class="privacy-container">
-                <a class="privacy-policy" href="privacy-policy/index.html">Política de privacidad</a>
-                <a class="privacy-policy" href="terms-of-service/index.html">Términos de servicio</a>
+                <a class="privacy-policy" href="privacy-policy/index.html"
+                    >Política de privacidad</a
+                >
+                <a class="privacy-policy" href="terms-of-service/index.html"
+                    >Términos de servicio</a
+                >
             </div>
-            
+
             <p class="copyright">
                 Copyright 2025 © Todos los derechos reservados
             </p>
@@ -526,6 +1027,168 @@
                 .getElementById("callLink")
                 .addEventListener("click", function () {
                     fbq("track", "Contact");
+                });
+        </script>
+
+        <script>
+            let currentStep = 0;
+            document.getElementById("step1").style.display = "block";
+
+            function nextStep(step) {
+                // Перевірка для першого кроку (вибір типу ремонту)
+                if (step === 1) {
+                    // Перевірка, чи вибрано радіокнопку для типу ремонту
+                    const radioButtons =
+                        document.getElementsByName("repair_type");
+                    let radioSelected = false;
+                    for (let i = 0; i < radioButtons.length; i++) {
+                        if (radioButtons[i].checked) {
+                            radioSelected = true;
+                            break;
+                        }
+                    }
+
+                    if (!radioSelected) {
+                        alert("Seleccione el tipo de reparación.");
+                        return; // Якщо не вибрано, не йдемо далі
+                    }
+
+                    // Перевірка для другого кроку (введення метражу)
+                } else if (step === 2) {
+                    const areaInput = document.getElementById("area");
+                    if (
+                        areaInput.value === "" ||
+                        isNaN(areaInput.value) ||
+                        areaInput.value <= 0
+                    ) {
+                        alert(
+                            "Por favor, introduzca el número correcto para la zona."
+                        );
+                        return; // Якщо не введено число, не йдемо далі
+                    }
+                } else if (step === 3) {
+                    // Перевірка, чи вибрано радіокнопку для типу ремонту
+                    const radioButtons =
+                        document.getElementsByName("material_quality");
+                    let radioSelected = false;
+                    for (let i = 0; i < radioButtons.length; i++) {
+                        if (radioButtons[i].checked) {
+                            radioSelected = true;
+                            break;
+                        }
+                    }
+
+                    if (!radioSelected) {
+                        alert("Seleccione el tipo de reparación.");
+                        return; // Якщо не вибрано, не йдемо далі
+                    }
+                }
+
+                // Якщо все пройшло успішно, переміщаємося до наступного кроку
+                document.getElementById("step" + step).style.display = "none"; // Ховаємо поточний крок
+                document.getElementById("step" + (step + 1)).style.display =
+                    "block"; // Показуємо наступний крок
+            }
+
+            function calculateCost() {
+                let repairType = document.querySelector(
+                    'input[name="repair_type"]:checked'
+                );
+                let area = parseFloat(document.getElementById("area").value);
+                let materialQuality = document.querySelector(
+                    'input[name="material_quality"]:checked'
+                );
+
+                // Для всіх полів "extra" та "admin" встановлюємо значення за умовчанням, якщо нічого не вибрано
+                let extraWiring = document.querySelector(
+                    'input[name="extra_wiring"]:checked'
+                );
+                extraWiring = extraWiring ? parseFloat(extraWiring.value) : 0;
+
+                let extraPipes = document.querySelector(
+                    'input[name="extra_pipes"]:checked'
+                );
+                extraPipes = extraPipes ? parseFloat(extraPipes.value) : 0;
+
+                let extraIsolation = document.querySelector(
+                    'input[name="extra_isolation"]:checked'
+                );
+                extraIsolation = extraIsolation
+                    ? parseFloat(extraIsolation.value)
+                    : 0;
+
+                let extraDoors = document.querySelector(
+                    'input[name="extra_doors"]:checked'
+                );
+                extraDoors = extraDoors ? parseFloat(extraDoors.value) : 0;
+
+                let extraCond = document.querySelector(
+                    'input[name="extra_cond"]:checked'
+                );
+                extraCond = extraCond ? parseFloat(extraCond.value) : 0;
+
+                let adminLicense = document.querySelector(
+                    'input[name="admin_license"]:checked'
+                );
+                adminLicense = adminLicense
+                    ? parseFloat(adminLicense.value)
+                    : 0;
+
+                let adminConsult = document.querySelector(
+                    'input[name="admin_consult"]:checked'
+                );
+                adminConsult = adminConsult
+                    ? parseFloat(adminConsult.value)
+                    : 0;
+
+                // Перевірка, чи заповнені основні обов'язкові поля
+                if (
+                    !repairType ||
+                    !materialQuality ||
+                    isNaN(area) ||
+                    area <= 0
+                ) {
+                    alert("Rellene todos los campos correctamente.");
+                    return;
+                }
+
+                let basePrice = parseFloat(repairType.value);
+                let qualityMultiplier = parseFloat(materialQuality.value);
+
+                // Обчислення загальної вартості
+                let totalCost =
+                    area * basePrice * qualityMultiplier +
+                    extraWiring * area +
+                    extraPipes * area +
+                    extraIsolation +
+                    extraDoors +
+                    extraCond * area +
+                    adminLicense +
+                    adminConsult;
+
+                // Виведення результату
+                document.getElementById("sum").textContent = totalCost;
+            }
+
+            function hideHeader() {
+                document.getElementById("calculatorHeader").style.display =
+                    "none";
+            }
+        </script>
+        <script>
+            document
+                .getElementById("repair-form")
+                .addEventListener("submit", function (event) {
+                    event.preventDefault();
+                    let formData = new FormData(this);
+
+                    fetch("php/calculator-send-mail.php", {
+                        method: "POST",
+                        body: formData,
+                    })
+                        .then((response) => response.text())
+                        .then((data) => alert(data))
+                        .catch((error) => console.error("Error:", error));
                 });
         </script>
     </body>

@@ -16,7 +16,14 @@ a {
     text-decoration: none;
     color: inherit;
 }
-h1, h2, h3, h4, h5, h6, p, a {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
     margin: 0;
     padding: 0;
 }
@@ -24,7 +31,8 @@ h1, h2, h3, h4, h5, h6, p, a {
 header {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/header-picture-min.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url(../images/header-picture-min.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0 75%;
@@ -88,7 +96,7 @@ nav .logo {
     justify-content: center;
     align-items: center;
     border: 1px solid rgba(210, 172, 111, 1);
-    transition: all .1s ease;
+    transition: all 0.1s ease;
 }
 .num-button:hover {
     background: rgba(210, 172, 111, 1);
@@ -96,13 +104,13 @@ nav .logo {
 
 .header-content {
     width: 92%;
-    margin: 92px auto 0;
+    margin: 32px auto 0;
     display: flex;
     flex-direction: column;
     color: rgba(255, 255, 255, 1);
 }
 .header-content h1 {
-    max-width: 1120px;
+    max-width: 675px;
     font-size: 64px;
     font-weight: 700;
     line-height: 77px;
@@ -133,7 +141,7 @@ nav .logo {
     font-weight: 500;
     background-color: rgba(210, 172, 111, 1);
     border: 1px solid rgba(210, 172, 111, 1);
-    transition: all .1s ease;
+    transition: all 0.1s ease;
 }
 .header-button:hover {
     background: none;
@@ -245,7 +253,7 @@ section h2 {
     width: 100%;
     height: 0;
     opacity: 0;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
 }
 .mainphoto-container:hover .photo-wrapper {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
@@ -308,13 +316,13 @@ section h2 {
     background-color: rgba(64, 89, 74, 1);
     border-radius: none;
 }
-  
+
 #progress-bar::-webkit-progress-value {
     background-color: rgba(64, 89, 74, 1);
     border-radius: none;
 }
-  
-  /* Для Firefox */
+
+/* Для Firefox */
 #progress-bar::-moz-progress-bar {
     background-color: rgba(64, 89, 74, 1);
     border-radius: none;
@@ -354,13 +362,13 @@ section h2 {
     font-weight: 600;
     line-height: 21px;
     cursor: pointer;
-    transition: all .1s ease;
+    transition: all 0.1s ease;
 }
 .answers button:hover {
-    background:rgba(210, 172, 111, 1);
+    background: rgba(210, 172, 111, 1);
 }
 .answers button:focus {
-    background:rgba(210, 172, 111, 1);
+    background: rgba(210, 172, 111, 1);
 }
 #input-container {
     display: flex;
@@ -399,7 +407,7 @@ section h2 {
     font-weight: 600;
     line-height: 21px;
     border: none;
-    transition: all .1s ease;
+    transition: all 0.1s ease;
 }
 #next-btn {
     margin: 20px auto 4px;
@@ -419,7 +427,7 @@ section h2 {
     cursor: pointer;
 }
 #back-btn:hover {
-    background: rgba(210, 172, 111, .1);
+    background: rgba(210, 172, 111, 0.1);
 }
 .confidentiality {
     margin: 20px auto 0;
@@ -445,7 +453,6 @@ section h2 {
     align-items: center;
     justify-content: center;
     gap: 10px;
-
 }
 #input-container #data-consent {
     width: 24px;
@@ -475,7 +482,8 @@ section h2 {
 .certificate-icon {
     width: 53px;
     height: 53px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/certificate.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url(../images/certificate.png);
     background-size: cover;
     cursor: pointer;
     display: flex;
@@ -488,7 +496,7 @@ section h2 {
 .certificate-icon img {
     width: 24px;
     height: 24px;
-    transition: all .1s ease;
+    transition: all 0.1s ease;
 }
 
 .certificate-buttons-container {
@@ -510,7 +518,7 @@ section h2 {
     line-height: 29px;
     color: rgba(255, 255, 255, 1);
     border: 1px solid rgba(210, 172, 111, 1);
-    transition: all .1s ease;
+    transition: all 0.1s ease;
 }
 .certificate-link:hover {
     background-color: rgba(210, 172, 111, 1);
@@ -527,7 +535,7 @@ section h2 {
     line-height: 29px;
     text-decoration: underline;
     color: rgba(210, 172, 111, 1);
-    transition: all .1s ease;
+    transition: all 0.1s ease;
 }
 .certificate-download:hover {
     opacity: 0.7;
@@ -727,7 +735,7 @@ section h2 {
     align-items: center;
     color: rgba(255, 255, 255, 1);
     background-color: rgba(210, 172, 111, 1);
-    transition: all .1s ease;
+    transition: all 0.1s ease;
 }
 .renovation-button:hover {
     background: none;
@@ -751,7 +759,7 @@ section h2 {
     top: 0;
     transform-origin: 0 100px;
     font-size: 20px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     color: rgba(210, 172, 111, 1);
 }
 
@@ -849,4 +857,238 @@ footer {
     display: flex;
     flex-direction: row;
     gap: 40px;
+}
+
+.calculator {
+    margin-top: 28px;
+    max-width: 731px;
+    min-height: 557px;
+    width: 100%;
+    background-color: rgba(250, 250, 250, 1);
+    position: relative;
+}
+.calculator .paint-roller-image {
+    width: 529px;
+    position: absolute;
+    top: 0;
+    right: -270px;
+}
+.calculator-container {
+    padding: 32px;
+}
+.calculator-container h2 {
+    font-size: 24px;
+    line-height: 100%;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 1);
+}
+.calculator-container .form-section {
+    display: none;
+}
+.calculator-container .form-section h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 1);
+    margin-top: 16px;
+}
+.calculator-container .form-section h4 {
+    font-size: 20px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 1);
+    margin-top: 26px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.calculator-container .form-section h4::before {
+    content: "";
+    background-image: url(../images/paint.png);
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+.calculator-container .form-section p {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 1);
+}
+.calculator-container .form-section div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 26px;
+}
+.calculator-container .form-section label {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 1);
+}
+.calculator-container .form-section .radio-container {
+    display: block;
+    position: relative;
+    border: 1px solid rgba(210, 172, 111, 1);
+    padding: 8px 8px 8px 35px;
+    max-width: 475px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+.calculator-input {
+    margin-top: 24px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: row !important;
+}
+.calculator-input input {
+    width: 148px;
+    height: 24px;
+    border-bottom: 1px solid rgba(210, 172, 111, 1);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: none;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 21px;
+    text-align: center;
+    text-align: left;
+    outline: none;
+}
+.calculator-input input::-webkit-outer-spin-button,
+.calculator-input input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.calculator-input input[type="number"] {
+    -moz-appearance: textfield;
+}
+.calculator-container .form-section .radio-container:has(input[type="radio"]:checked) {
+    color: rgba(210, 172, 111, 1) !important;
+}
+
+.calculator-container .form-section .radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark {
+    position: absolute;
+    top: 14px;
+    left: 8px;
+    height: 14px;
+    width: 14px;
+    background-color: none;
+    border: 1px solid rgba(0, 0, 0, 1);
+}
+.calculator-container .form-section .radio-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+.calculator-container .form-section .radio-container input:checked ~ .checkmark {
+    border: 1px solid rgba(210, 172, 111, 1);
+    background-color: rgba(210, 172, 111, 1);
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.calculator-container .form-section .radio-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.form-section .next-step {
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+}
+.form-section .next-step:hover {
+    background: #cccccc48;
+    transition: all 0.1s ease;
+}
+.form-section .next-step img {
+    width: 24px;
+    position: relative !important;
+    right: 0;
+}
+.form-section .sum-paragraph {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 100%;
+    text-align: center;
+}
+.form-section .sum-paragraph .calculator-sum {
+    color: rgba(210, 172, 111, 1);
+    text-decoration: underline;
+}
+.form-section .fill-button {
+    max-width: 442px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(210, 172, 111, 1);
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 1);
+    padding: 10px 49px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+.form-section .fill-button:hover {
+    background: none;
+    border: 1px solid rgba(210, 172, 111, 1);
+    color: rgba(210, 172, 111, 1);
+}
+
+.form-section .form-section-contacts input {
+    max-width: 442px;
+    width: 100%;
+    height: 44px;
+    background: none;
+    border: 1px solid rgba(210, 172, 111, 1);
+    outline: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding-left: 8px;
+}
+.form-section .form-section-contacts textarea {
+    max-width: 442px;
+    width: 100%;
+    height: 83px;
+    background: none;
+    border: 1px solid rgba(210, 172, 111, 1);
+    outline: none;
+    resize: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 8px 0 0 8px;
+}
+.form-section .caption {
+    margin-top: 0 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: rgba(210, 172, 111, 1) !important;
+    line-height: 0 !important;
+}
+.paragraph-container {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 16px !important;
+    margin: 160px auto 0 !important;
+    max-width: 667px;
+}
+.paragraph-container .paragraph-image {
+    width: 32px;
 }
