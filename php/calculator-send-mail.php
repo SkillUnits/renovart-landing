@@ -15,7 +15,7 @@ use PHPMailer\PHPMailer\Exception;
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $name = isset($_POST["name"]) ? htmlspecialchars($_POST["name"]) : "No especificado";
     $phone = isset($_POST["phone"]) ? htmlspecialchars($_POST["phone"]) : "No especificado";
-    $comment = isset($_POST["comment"]) ? htmlspecialchars($_POST["comment"]) : "No especificado";
+    $comments = isset($_POST["comments"]) ? htmlspecialchars($_POST["comments"]) : "No especificado";
 
     $message = "Nuevo formulario recibido:\n\n";
     $message .= "Nombre: $name\n";
